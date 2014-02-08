@@ -13,74 +13,29 @@ h2 {
 /* -- Banner Components -- */
 .banner {
   height: 300px;
+  background: #000;
 }
 
 /* -- Navigation components -- */
 .main-nav ul {
   list-style-type: none;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 .main-nav li {
-  margin-top:1em;
+  margin-top: 1em;
+}
+
+.main-nav li:first-child {
+  margin-top: 0;
 }
 
 .main-nav a {
   display: block;
+  background: #ececec;
   padding: 1em;
   text-align: center;
-}
-  
-.pattern {
-  width: 100%;
-  background-color: #FFF;
-  box-shadow: 0px 2px 5px #DDD;
-  -webkit-box-shadow: 0px 2px 5px #DDD;
-  -moz-box-shadow: 0px 2px 5px #DDD;
-  margin-bottom: 1em;
-  overflow: hidden;
-}
-
-section { padding:1em; }
-
-a.menu-link {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  display:block;
-  padding:1em;
-}
-
-a.menu-link:before {
-  content:'\2630';
-  color: #000;
-  font-size: 30px;
-}
-
-/* Hide */
-nav[role=navigation] {
-  max-height:0;
-}
-
-/* Show */
-nav[role=navigation].active {
-  max-height:15em;
-}
-
-/* Vertical Menu */
-nav[role=navigation] {
-  clear: both;
-  -webkit-transition: all 0.3s ease-out;  
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-nav[role=navigation] li a {
-  display: block;
-  padding: 0.8em;
 }
 
 /* -- Layout Components -- */
@@ -124,35 +79,38 @@ nav[role=navigation] li a {
   background: blue;
 }
 
-/* -------------------- Media Queries -------------------- */
+/* -- Tablet Media Query -- */
 
-/* -- Smartphone Media Query -- */
-@media (max-width: 640px) {
-
-    .main-nav ul {
-    clear:both;
+@media (min-width: 48em) {
+  .main-nav ul:before, .main-nav ul:after {
+    content: " ";
+    display: table;
   }
-  
-   .main-nav li {
+
+  .main-nav ul:after {
+    clear: both;
+  }
+
+  .main-nav li {
     float: left;
     margin-left: 1em;
     margin-top: 0;
   }
-  
-   .main-nav li:first-child {
+
+  .main-nav li:first-child {
     margin-left: 0;
   }
-  
-   .main-nav a {
-    padding:0.5em 1em;
-    text-align:left;
-  }
 
+  .main-nav a {
+    padding: 0.5em 1em;
+    text-align: left;
+  }
 }
 
-/* -- Portrait Tablet Media Query -- */
-@media (max-width: 980px) {
-      .container {
+/* -- Desktop Media Query -- */  
+
+@media (min-width: 1007px) {
+    .container {
       width: 1007px;
     }
 
@@ -180,56 +138,4 @@ nav[role=navigation] li a {
     .col-3:first-child {
         margin-left: 0;
     }
-}
-
-/* -- Landscape Tablet Media Query -- */
-@media (max-width: 1024px) {
-
-  a.menu-link {
-    display:none;
-  }
-
-    nav[role=navigation] {
-    max-height: none;
-    float: left;
-  }
-  
-    nav[role=navigation] ul {
-    margin: 0 0 0 -0.25em;
-    border: 0;
-  }
-
-/* Horizontal Navigation */ 
-    nav[role=navigation]  li {
-    display: inline-block;
-    margin: 0.3em 1em;
-  }
-    nav[role=navigation] li a {
-    border: 0;
-  }
-
-  .main-nav ul:before, .main-nav ul:after {
-    content: " ";
-    display: table;
-  }
-
-  .main-nav ul:after {
-    clear: both;
-  }
-
-  .main-nav li {
-    float: left;
-    margin-left: 1em;
-    margin-top: 0;
-  }
-
-  .main-nav li:first-child {
-    margin-left: 0;
-  }
-
-  .main-nav a {
-    padding: 0.5em 1em;
-    text-align: left;
-  }
-
 }
