@@ -7,7 +7,22 @@
 </head>
 <body>
     <div class="container">
-    	<h1>Layout</h1>
+        <!--Navigation Menu-->
+          <div id="pattern" class="pattern">
+             <a href="#">Ottawa Graffiti Museum</a>
+            <!--Begin Pattern HTML-->
+               <a href="#" class="menu-link"></a>
+                <nav id="menu" role="navigation">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Visit Us</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="search"></div>
+            </div>
+        <!--End Navigation Menu-->
     </div>
     <div class="banner"></div>
     <div class="container">
@@ -57,6 +72,19 @@
         <!--// 3 Column Layout -->
         
     </div>
-    
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var menulink = $('.menu-link');
+        var nav = $('#menu');
+      
+        menulink.click(function() {
+            nav.toggleClass('active');
+            return false;
+        });
+    });
+</script>
+
 </body>
 </html>
