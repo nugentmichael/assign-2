@@ -14,9 +14,17 @@ h2 {
   font-size: 2.2rem;
 }
 
+* {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
 /* -- Banner Components -- */
 .banner {
-  height: auto;
+  max-height: 400px;
   overflow: hidden;
 }
 
@@ -28,7 +36,7 @@ h2 {
 /* -- Navigation components -- */
 
 #navbar {
-  background-color: #EEE;
+  background-color: #EBEBEB;
 }
 
 .main-nav ul {
@@ -49,8 +57,13 @@ h2 {
   
 .pattern {
   width: 100%;
-  background-color: #EEE;
+  background-color: #EBEBEB;
   overflow: hidden;
+}
+
+.pattern img {
+  max-width: 305px;
+  height: auto;
 }
 
 section { padding:1em; }
@@ -87,7 +100,6 @@ nav[role=navigation].active {
 
 /* Vertical Menu */
 nav[role=navigation] {
-  text-align: right;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease-out;  
   -moz-transition: all 0.3s ease-out;
@@ -184,9 +196,7 @@ nav[role=navigation] li a:active {
 
 /* -- Smartphone Media Query -- */
 @media (max-width: 979px) {
-  nav[role="navigation"] {
-    margin-top: 3.2em;
-  }
+
 }
 
 /* -- Tablet Media Query -- */
@@ -234,11 +244,11 @@ nav[role=navigation] li a:active {
     nav[role=navigation] {
       max-height: none;
       display: inline-block;
-      float: right;
     }
 
     nav[role=navigation] ul {
-      margin: 0 0 0 -0.25em;
+      float: right;
+      margin-left: 10em;
       border: 0;
     }
 
