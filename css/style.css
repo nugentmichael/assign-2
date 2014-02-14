@@ -62,8 +62,9 @@ h2 {
 }
 
 .pattern img {
-  max-width: 305px;
+  max-width: 15.5em;
   height: auto;
+  margin: 0.39em 0;
 }
 
 section { padding:1em; }
@@ -182,8 +183,25 @@ nav[role=navigation] li a:active {
 }
 
 .col-1 {
-  background: purple;
+  background-color: #EBEBEB;
   width: 100%;
+}
+
+.col-1 p {
+  float: left;
+  margin: 22px 10px 0 20px;
+  width: 65%;  
+}
+
+#contact {
+  float: right;
+  width: 30%;
+  background-color: #4C575D;
+}
+
+#contact p {
+  margin: 20px 0 10px 20px;
+  color: #C9CBCB;
 }
 
 .col-2 {
@@ -202,6 +220,10 @@ nav[role=navigation] li a:active {
 /* -- Tablet Media Query -- */
 
 @media (min-width: 48em) {
+
+  .col {
+    margin-top: 0;
+  }
 
   .main-nav ul { clear: both; }
   .main-nav li { float: left; margin-left: 1em; margin-top: 0; }
@@ -235,7 +257,7 @@ nav[role=navigation] li a:active {
 
 /* -- Desktop Media Query -- */  
 
-@media (min-width: 980px) {
+@media (min-width: 62em) {
 
     a.menu-link {
       display:none;
@@ -285,9 +307,19 @@ nav[role=navigation] li a:active {
     .col-3 {
       width: 32%;
       margin-left: 2%;
+      background-color: inherit;
+    }
+
+    .col-3 img {
+      max-width: 100%;
+      height: auto;
     }
     
     .col-3:first-child {
         margin-left: 0;
+    }
+
+    #contact {
+      width: 30%;
     }
 }
