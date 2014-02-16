@@ -172,7 +172,7 @@ nav[role=navigation] li a:active {
 .col {
   margin-top: 1em;
   padding-top: 1em;
-  border-top: 1px solid blue;
+/*  border-top: 1px solid blue;*/
   min-height: 200px;
 }
 
@@ -209,20 +209,57 @@ nav[role=navigation] li a:active {
 }
 
 .col-3 {
-  background: blue;
+/*  background: blue;*/
+  min-height: 250px;
+}
+
+#footer {
+  background-color: #EBEBEB;
+  padding: 0.5em;
 }
 
 /* -- Smartphone Media Query -- */
-@media (max-width: 979px) {
-
+@media (max-width: 48em) {
+  .col-3 img {
+    float: none !important;
+    display: block;
+    margin: auto !important;
+  }
 }
 
 /* -- Tablet Media Query -- */
 
-@media (min-width: 48em) {
+@media (max-width: 60em) {
+
+  .col-container:nth-child(even) {
+    margin-top: 2em;
+  }
 
   .col {
     margin-top: 0;
+    padding-top: 0;
+  }
+
+  .col-1 p {
+    float: none;
+    width: auto;
+    margin: 0;
+    padding: 1em;
+  }
+
+  #contact {
+    width: 100%;
+  }
+
+  .col-3 img {
+    float: left;
+    width: 15em;
+    height: auto;
+    margin: 1.5em;
+  }
+
+  .col-3 p {
+    padding-top: 1.5em;
   }
 
   .main-nav ul { clear: both; }
@@ -257,7 +294,7 @@ nav[role=navigation] li a:active {
 
 /* -- Desktop Media Query -- */  
 
-@media (min-width: 62em) {
+@media (min-width: 60em) {
 
     a.menu-link {
       display:none;
