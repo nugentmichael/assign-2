@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>Ottawa Graffiti Museum</title>
+    <link type="text/css" href="css/normalize.css" rel="stylesheet">
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div id="navbar" class="container">
+        <!--Navigation Menu-->
+          <div id="pattern" class="pattern">
+             <a href="#"><img src="images/logo.png" alt="Ottawa Graffiti Museum"></a>
+            <!--Begin Pattern HTML-->
+               <a href="#" class="menu-link"></a>
+                <nav id="menu" role="navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="visitus.html">Visit Us</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        <!--End Navigation Menu-->
+    </div>
+    
+    <div class="container">
+    
+    	<!-- 1 Column Layout -->
+    	<div class="col-container">
+                <div id="form-main">
+                  <div id="form-div">
+                    <form class="form" id="form1">
+                      
+                      <p class="name">
+                        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+                      </p>
+                      
+                      <p class="email">
+                        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+                      </p>
+                      
+                      <p class="text">
+                        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+                      </p>
+                      
+                      
+                      <div class="submit">
+                        <input type="submit" value="SEND" id="button-blue"/>
+                        <div class="ease"></div>
+                      </div>
+                    </form>
+                  </div>
+             </div>
+        </div>
+
+        <div id="footer" class="container">
+            <p>&copy; copyright 2014 Ottawa Graffiti Museum</p>
+            <div>
+                <a href="#"><img src="images/pinterest.png"></a>
+                <a href="#"><img src="images/youtube.png"></a>
+                <a href="#"><img src="images/twitter.png"></a>
+                <a href="#"><img src="images/facebook.png"></a>
+            </div>
+        </div>
+        
+    </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var menulink = $('.menu-link');
+        var nav = $('#menu');
+      
+        menulink.click(function() {
+            nav.toggleClass('active');
+            return false;
+        });
+
+    var banner = document.querySelector(".banner");
+
+    if (matchMedia) {
+        var mq = window.matchMedia("(max-width: 60em)");
+        mq.addListener(WidthChange);
+        WidthChange(mq);
+    }
+
+    function WidthChange(mq) {
+
+        if (mq.matches) {
+            
+        }
+        else {
+           
+        }
+
+    }
+    });
+</script>
+
+</body>
+</html>
